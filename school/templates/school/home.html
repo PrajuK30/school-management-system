@@ -1,0 +1,35 @@
+<!-- school/templates/school/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to the School Management System</h1>
+            <p>This is the home page where you can view information about courses and other details.</p>
+        </header>
+
+        <section>
+            <h2>Our Courses</h2>
+            {% if courses %}
+                <ul>
+                    {% for course in courses %}
+                        <li>{{ course.course_name }}: {{ course.course_description }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No courses available at the moment.</p>
+            {% endif %}
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
