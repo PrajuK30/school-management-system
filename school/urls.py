@@ -20,5 +20,5 @@ urlpatterns = [
     path('', views.home, name='home'),  # Home page at the root URL (http://127.0.0.1:8000/)
     
     # API views handled by the router
-    path('/api/api/', include(router.urls)),  # Include all API routes handled by the router
+    path('api/', include(router.urls)),  # Include all API routes handled by the router
 ]
